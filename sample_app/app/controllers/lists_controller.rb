@@ -8,6 +8,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list.id)
     else
+      flash[:notice] = "投稿が成功しました"
       render :new
     end
   end
